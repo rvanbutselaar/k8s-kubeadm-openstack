@@ -27,7 +27,7 @@ sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
 swapoff -a
 sed -i '/swapfile/d' /etc/fstab
 
-yum install -y kubelet-1.14.6 kubeadm-1.14.6 kubectl-1.14.6 --disableexcludes=kubernetes
+yum install -y kubelet-1.14.9 kubeadm-1.14.9 kubectl-1.14.9 --disableexcludes=kubernetes
 
 systemctl enable --now kubelet
 systemctl enable --now docker
