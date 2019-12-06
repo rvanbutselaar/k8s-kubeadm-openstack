@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
+yum update -y
 yum install -y docker
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
@@ -33,3 +34,5 @@ systemctl enable --now docker
 
 # pre-load images
 kubeadm config images pull
+
+reboot
