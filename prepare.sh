@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 yum install -y docker
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
